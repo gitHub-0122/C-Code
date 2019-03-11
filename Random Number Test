@@ -1,0 +1,28 @@
+//Pre-processor directives
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void print(int);
+
+/*
+ *This file will print out a set of 5 random numbers within the given range: [34-65]
+  *@author Mitchel Santillan
+  *@date 3/11/2019
+  */
+int main() {
+  //Prints a set of 5 random numbers in the given range: [34-65];
+  //Formula used: rand() % (y-x+1) + x if desired range is [x, y]
+  
+  srand(time(0));
+  int num = 0;
+  //Sets num to a random value 5 times and prints it out.
+  for (int i = 0; i < 5; i++) {    
+    num = rand() % (65 - 34 + 1) + 34;
+    print(num);
+  }
+  
+  void print(int x) {
+    cout << x << endl;
+  }
+}
